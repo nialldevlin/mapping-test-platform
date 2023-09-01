@@ -2,7 +2,7 @@ prefix=/home/ubuntu/tankpi/catkin_ws/install
 
 Name: motor_ctrl
 Description: Description of motor_ctrl
-Version: 0.0.0
+Version: 0.1.0
 Cflags: 
 Libs: -L${prefix}/lib 
-Requires: 
+Requires: rospy geometry_msgs std_msgs

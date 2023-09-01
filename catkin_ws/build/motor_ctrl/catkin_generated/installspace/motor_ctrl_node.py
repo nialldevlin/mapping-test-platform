@@ -33,8 +33,8 @@ def cmd_vel_callback(msg):
     angular_vel = msg.angular.z
 
     # Calculate motor speeds based on velocities
-    left_speed = linear_vel + angular_vel
-    right_speed = linear_vel - angular_vel
+    left_speed = linear_vel - angular_vel
+    right_speed = linear_vel + angular_vel
 
     # Limit speeds to an acceptable range
     left_speed = max(min(left_speed, 1.0), -1.0)
@@ -52,7 +52,7 @@ def cmd_vel_callback(msg):
 
 def motor_control_node():
     rospy.init_node('motor_control_node', anonymous=True)
-    rospy.Subscriber('joy_teleop/cmd_vel', Twist, cmd_vel_callback)
+    rospy.Subscriber('cmd_vel', Twist, cmd_vel_callback)
     rospy.spin()
 
 if __name__ == '__main__':
@@ -65,4 +65,3 @@ if __name__ == '__main__':
         pwm_motor_a.stop()
         pwm_motor_b.stop()
         GPIO.cleanup()
-

@@ -8,6 +8,9 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/ubuntu/tankpi/catkin_ws/devel/.private/realsense2_camera:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/ubuntu/tankpi/catkin_ws/devel/.private/realsense2_camera/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/ubuntu/tankpi/catkin_ws/devel/.private/realsense2_camera/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/ubuntu/tankpi/catkin_ws/build/realsense2_camera'
+export PYTHONPATH="/home/ubuntu/tankpi/catkin_ws/devel/.private/realsense2_camera/lib/python3/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/ubuntu/tankpi/catkin_ws/devel/.private/realsense2_camera/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/ubuntu/tankpi/catkin_ws/src/realsense-ros/realsense2_camera:$ROS_PACKAGE_PATH"
