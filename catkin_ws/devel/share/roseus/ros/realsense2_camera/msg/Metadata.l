@@ -1,1 +1,0 @@
-/home/ubuntu/tankpi/catkin_ws/devel/.private/realsense2_camera/share/roseus/ros/realsense2_camera/msg/Metadata.l

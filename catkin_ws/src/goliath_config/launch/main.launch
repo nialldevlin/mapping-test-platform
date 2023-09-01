@@ -1,0 +1,16 @@
+<launch>
+  <arg name="teleop" default="true" />
+  <arg name="base" default="true" />
+  
+  <group if="$(arg base)">
+    <include file="$(find motor_ctrl)/launch/motor.launch" />
+  </group>
+
+  <group if="$(arg teleop)">
+    <rosparam command="load" file="$(find goliath_config)/config/teleop_logitech.yaml" />
+
+    <node pkg="joy" type="joy_node" name="joy_node" />
+    <node pkg="teleop_twist_joy" type="teleop_node" name="teleop_twist_joy"/>
+  </group>
+</launch>
+

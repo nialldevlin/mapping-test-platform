@@ -1,1 +1,0 @@
-/home/ubuntu/tankpi/catkin_ws/devel/.private/motor_ctrl/lib/motor_ctrl/motor_ctrl_node.py
