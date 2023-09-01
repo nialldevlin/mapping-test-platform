@@ -1,0 +1,1 @@
+/home/ubuntu/tankpi/catkin_ws/devel/.private/motor_ctrl/share/motor_ctrl/cmake/motor_ctrlConfig.cmake

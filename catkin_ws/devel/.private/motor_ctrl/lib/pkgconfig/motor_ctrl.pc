@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/tankpi/catkin_ws/devel/.private/motor_ctrl
+
+Name: motor_ctrl
+Description: Description of motor_ctrl
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

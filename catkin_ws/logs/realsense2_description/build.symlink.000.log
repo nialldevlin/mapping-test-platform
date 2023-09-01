@@ -1,0 +1,13 @@
+Symlinking /home/ubuntu/tankpi/catkin_ws/devel/lib/pkgconfig/realsense2_description.pc
+Symlinking /home/ubuntu/tankpi/catkin_ws/devel/share/realsense2_description/cmake/realsense2_descriptionConfig.cmake
+Symlinking /home/ubuntu/tankpi/catkin_ws/devel/share/realsense2_description/cmake/realsense2_descriptionConfig-version.cmake
+Cleaning: (/home/ubuntu/catkin_ws/devel/.private/realsense2_description/cmake.lock, /home/ubuntu/catkin_ws/devel/./cmake.lock)
+Cleaning: (/home/ubuntu/catkin_ws/devel/.private/realsense2_description/lib/pkgconfig/realsense2_description.pc, /home/ubuntu/catkin_ws/devel/lib/pkgconfig/realsense2_description.pc)
+Cleaning: (/home/ubuntu/catkin_ws/devel/.private/realsense2_description/share/realsense2_description/cmake/realsense2_descriptionConfig.cmake, /home/ubuntu/catkin_ws/devel/share/realsense2_description/cmake/realsense2_descriptionConfig.cmake)
+Cleaning: (/home/ubuntu/catkin_ws/devel/.private/realsense2_description/share/realsense2_description/cmake/realsense2_descriptionConfig-version.cmake, /home/ubuntu/catkin_ws/devel/share/realsense2_description/cmake/realsense2_descriptionConfig-version.cmake)
+Unlinking: /home/ubuntu/catkin_ws/devel/lib/pkgconfig/realsense2_description.pc
+Already unlinked: {}
+Unlinking: /home/ubuntu/catkin_ws/devel/share/realsense2_description/cmake/realsense2_descriptionConfig.cmake
+Already unlinked: {}
+Unlinking: /home/ubuntu/catkin_ws/devel/share/realsense2_description/cmake/realsense2_descriptionConfig-version.cmake
+Already unlinked: {}
