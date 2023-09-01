@@ -7,10 +7,7 @@
   </group>
 
   <group if="$(arg teleop)">
-    <rosparam command="load" file="$(find goliath_config)/config/teleop_logitech.yaml" />
-
-    <node pkg="joy" type="joy_node" name="joy_node" />
-    <node pkg="teleop_twist_joy" type="teleop_node" name="teleop_twist_joy"/>
+    <include file="$(find teleop)/launch/teleop.launch" />
   </group>
 </launch>
 

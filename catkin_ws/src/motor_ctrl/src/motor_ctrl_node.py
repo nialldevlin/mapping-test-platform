@@ -6,8 +6,8 @@ import RPi.GPIO as GPIO
 
 # GPIO pins for motor control
 ENA = 13  # Enable motor A
-IN1 = 19  # Motor A input 1
-IN2 = 26  # Motor A input 2
+IN1 = 5  # Motor A input 1
+IN2 = 6  # Motor A input 2
 ENB = 12  # Enable motor B
 IN3 = 16  # Motor B input 1
 IN4 = 20  # Motor B input 2
@@ -28,27 +28,22 @@ pwm_motor_a.start(0)  # Start with 0% duty cycle
 pwm_motor_b.start(0)
 
 def cmd_vel_callback(msg):
-    # Extract linear and angular velocities
-    linear_vel = msg.linear.x
-    angular_vel = msg.angular.z
-
     # Calculate motor speeds based on velocities
-    left_speed = linear_vel - angular_vel
-    right_speed = linear_vel + angular_vel
-
-    # Limit speeds to an acceptable range
-    left_speed = max(min(left_speed, 1.0), -1.0)
-    right_speed = max(min(right_speed, 1.0), -1.0)
+    left_speed = abs(msg.linear.x) * 100
+    right_speed = abs(msg.linear.y) * 100
+    left_dir = msg.linear.x > 0
+    right_dir = msg.linear.y > 0
 
     # Convert speeds to PWM duty cycles (0 to 100)
-    pwm_motor_a.ChangeDutyCycle(abs(left_speed) * 100)
-    pwm_motor_b.ChangeDutyCycle(abs(right_speed) * 100)
+    pwm_motor_a.ChangeDutyCycle(right_speed)
+    pwm_motor_b.ChangeDutyCycle(left_speed)
 
     # Set motor directions based on speeds
-    GPIO.output(IN1, left_speed > 0)
-    GPIO.output(IN2, left_speed < 0)
-    GPIO.output(IN3, right_speed > 0)
-    GPIO.output(IN4, right_speed < 0)
+    GPIO.output(IN1, not right_dir)
+    GPIO.output(IN2, right_dir)
+    GPIO.output(IN3, left_dir)
+    GPIO.output(IN4, not left_dir)
+
 
 def motor_control_node():
     rospy.init_node('motor_control_node', anonymous=True)

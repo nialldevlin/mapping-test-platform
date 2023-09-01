@@ -1,6 +1,5 @@
 # Teleop configuration for Logitech F710 Gamepad using the x-pad configuration.
-# LB enable
-# Left stick drive
+# Left stick left drive, right stick right drive
 #
 #         (LB)                                 (RB)
 #         (LT)                                 (RT)
@@ -38,13 +37,11 @@
 # D-pad Horiz.     5
 # D-pad Vert.      6
 
-teleop_twist_joy:
-  axis_linear: 1
-  scale_linear: 1.0
-  axis_angular: 2
-  scale_angular: 1.2
-  enable_button: 4
-  enable_turbo_button: -1
+teleop:
+  joy_topic: joy
+  cmd_vel_topic: cmd_vel
+  left_axis: 1
+  right_axis: 3
 joy_node:
   deadzone: 0.1
   autorepeat_rate: 20
