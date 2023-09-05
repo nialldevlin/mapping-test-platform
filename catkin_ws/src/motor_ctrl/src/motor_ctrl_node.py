@@ -29,8 +29,8 @@ pwm_motor_b.start(0)
 
 def cmd_vel_callback(msg):
     # Calculate motor speeds based on velocities
-    left_speed = abs(msg.linear.x) * 100
-    right_speed = abs(msg.linear.y) * 100
+    left_speed = abs(msg.linear.x)**4 * 100
+    right_speed = abs(msg.linear.y)**4 * 100
     left_dir = msg.linear.x > 0
     right_dir = msg.linear.y > 0
 

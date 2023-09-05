@@ -29,6 +29,9 @@ packages=(
     ros-noetic-tf2-tools
     ros-noetic-imu-transformer
     ros-noetic-imu-filter-madgwick
+    ros-noetic-image-common
+    ros-noetic-librealsense2
+    ros-noetic-realsense2-camera
 
     python3-rosdep
     python3-catkin-tools
@@ -37,6 +40,8 @@ packages=(
     libjsoncpp-dev
     libpcl-dev
     libcv-bridge-dev
+
+    librealsense2-dev
 )
 
 sudo apt-get install -y ${packages[@]}
