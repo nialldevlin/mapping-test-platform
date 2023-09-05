@@ -14,11 +14,13 @@
   <build_depend>geometry_msgs</build_depend>
   <build_depend>std_msgs</build_depend>
   <build_depend>image_transport</build_depend>
+  <build_depend>cv_bridge</build_depend>
   
   <run_depend>rospy</run_depend>
   <run_depend>geometry_msgs</run_depend>
   <run_depend>std_msgs</run_depend>
   <run_depend>image_transport</run_depend>
+  <run_depend>cv_bridge</run_depend>
   
   <export>
     <!-- Other export tags, if needed -->
