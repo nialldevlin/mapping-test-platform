@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<launch>
+    <arg name="depth" default="true" />
+    <arg name="color" default="true" />
+
+    <include file="$(find realsense2_camera)/launch/rs_camera.launch">
+        <arg name="filters" value="pointcloud" />
+        <arg name="depth_fps" value="30" />
+        <arg name="depth_width" value="640" />
+        <arg name="depth_height" value="480" />
+        <arg name="color_fps" value="30" />
+        <arg name="color_width" value="640" />
+        <arg name="color_height" value="480" />
+        <arg name="enable_color" value="$(arg color)" />
+        <arg name="enable_depth" value="$(arg depth)" />
+        <arg name="pointcloud_texture_stream" value="RS2_STREAM_ANY" />
+    </include>
+
+    <node type="image" pkg="image" name="image">
+        <param name="_image" value="transport_thora" />
+    </node>
+
+</launch>
