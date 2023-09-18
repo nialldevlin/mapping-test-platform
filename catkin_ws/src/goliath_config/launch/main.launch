@@ -11,8 +11,8 @@
     <include file="$(find teleop)/launch/teleop.launch" />
   </group>
 
-  <group if="$arg cam">
-    <include file="$(find image)/laumch/send_image.launch" />
+  <group if="$(arg cam)">
+    <include file="$(find image)/launch/send_image.launch" />
   </group>
 </launch>
 
