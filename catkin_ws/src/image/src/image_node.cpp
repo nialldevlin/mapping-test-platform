@@ -16,7 +16,7 @@ int main(int argc, char** argv)
   ros::init(argc, argv, "image_node");
   ros::NodeHandle nh;
   image_transport::ImageTransport it(nh);
-  image_transport::Subscriber sub = it.subscribe("/camera/color/image_raw", 1, imageCallback);
+  image_transport::Subscriber sub = it.subscribe("/usb_cam_node/image_raw", 1, imageCallback);
   pub = it.advertise("/gray_image", 1);
   ros::spin();
 }

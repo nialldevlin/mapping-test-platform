@@ -1,6 +1,7 @@
 <launch>
   <arg name="teleop" default="true" />
   <arg name="base" default="true" />
+  <arg name="cam" default="true" />
   
   <group if="$(arg base)">
     <include file="$(find motor_ctrl)/launch/motor.launch" />
@@ -8,6 +9,10 @@
 
   <group if="$(arg teleop)">
     <include file="$(find teleop)/launch/teleop.launch" />
+  </group>
+
+  <group if="$arg cam">
+    <include file="$(find image)/laumch/send_image.launch" />
   </group>
 </launch>
 

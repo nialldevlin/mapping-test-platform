@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<launch>
+
+    <node name="usb_cam_node" pkg="usb_cam" type="usb_cam_node">
+    </node>
+
+    <node name="image" pkg="image" type="image" />
+
+</launch>
