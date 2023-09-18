@@ -1,7 +1,7 @@
 _dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 getip() {
-    ip=$(grep -e "$1" /etc/hosts | cut -d " " -f 1)
+    ip=$(grep -e "$1" /etc/hosts | awk '{print $1;}')
     echo "$ip"
     return 0
 }
